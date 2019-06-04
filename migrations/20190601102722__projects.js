@@ -24,7 +24,7 @@ exports.up = async function(knex) {
   });
 };
 
-exports.down = function(knex, Promise) {
-  knex.schema.dropTableIfExists("actions");
-  knex.schema.dropTableIfExists("projects");
+exports.down = async function(knex) {
+  await knex.schema.dropTableIfExists("actions");
+  await knex.schema.dropTableIfExists("projects");
 };

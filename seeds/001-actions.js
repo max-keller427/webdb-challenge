@@ -4,7 +4,7 @@ exports.seed = async function(knex) {
       id: 4,
       description: "more descriptive properties",
       notes: "blue",
-      completed: true,
+      complete: true,
       project_id: 2
     }
   ]);

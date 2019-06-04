@@ -44,7 +44,7 @@ router.post("/", (req, res) => {
 
 router.post("/actions", (req, res) => {
   db("actions")
-    .insert()
+    .insert(req.body)
     .then(action => {
       res.status(200).json(action);
     })
